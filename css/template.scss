@@ -1,0 +1,102 @@
+$brand: #46B1DE;
+$text: #0F2D4A;
+$light: #FFFFFF;
+$black: #000000;
+$border: #DDE0DC;
+$Bordersecond: #d8e1e1;
+$bacgraund: #a1c7d4;
+$input: #d9d9d9;
+$button: #27a7de;
+$footergrad_1: #A1C7D4;
+$footergrad_2: #0680AA;
+$footermedia_1: #A1C7D4;
+$footermedia_2: #0680AA;
+$buttongrad: #0591CC;
+h1 {
+    padding: 0;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 52px;
+    letter-spacing: 10%;
+ }
+h1 {
+    span {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 52px;
+        color: $brand;
+    }
+}
+h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 44px;
+    text-transform: uppercase;
+ }
+ h2 {
+    span {
+        font-size: 34px;
+        font-weight: 600px;
+        color: $brand;
+        line-height: 44px;
+    }
+ }
+ h3 {
+    margin-top: 30px;
+    margin-bottom: 7px;
+    font-size: 32px;
+    font-weight: 500px;
+    text-transform: uppercase;
+}
+.container-centr {
+    margin: 90px auto 0px;
+}
+.content {
+    margin-top: 90px;
+}
+.input-block {
+    margin: 90px auto 0px;
+}
+.images {
+    margin: 90px auto 0px;
+}
+footer {
+    margin-top: 90px;
+}
+@media (max-width: 992px){
+    .container-centr {
+        margin: 90px auto 0px;
+    }
+    .content {
+        margin-top: 90px;
+    }
+    .input-block {
+        margin: 90px auto 0px;
+    }
+    .images {
+        margin: 90px auto 0px;
+    }
+    footer {
+        margin-top: 90px;
+    }
+}
+@media (max-width: 500px) {
+    .container-centr {
+        margin: 30px auto 0px;
+    }
+    .content {
+        margin-top: 30px;
+    }
+    .input-block {
+        margin: 30px auto 0px;
+    }
+    .images {
+        margin: 30px auto 0px;
+    }
+    footer {
+        margin-top: 30px;
+    }
+}

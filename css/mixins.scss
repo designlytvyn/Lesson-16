@@ -1,0 +1,13 @@
+@mixin triangle-style {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #46b1de;
+    position: absolute;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
