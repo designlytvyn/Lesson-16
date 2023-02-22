@@ -620,7 +620,7 @@ header {
     border-radius: 10px;
     margin: 0px auto;
 }
-input {
+.name, .mail, .button {
     width: 233px;
     height: 57px;
     border-radius: 8px;
@@ -1013,64 +1013,76 @@ footer {
             left: 5px;
         }
      }
-     .burg-menu {
-        color: none;
+    .burger {
         position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        top: 67px;
+        right: 20px;
+    }
+    .menu-btn {
+        display: block;
         width: 40px;
         height: 40px;
+        position: absolute;
+        position: relative;
         cursor: pointer;
-        left: 91.5%;
-        top: 68px;
-        z-index: 3;
-    }
-    .burg-menu:focus {
-        cursor: pointer;
-    }
-    .burg-menu {
-        span {
-            width: 30px;
-            height: 3px;
-            background-color: $black;
-            display: block;
-            margin: 3px;
-            transition: all 0.3s;
-        }
-    }
-    .burg-menu:focus {
-        span:nth-child(1) {
-            transform: translate(0px, -1px) rotate(-45deg);
-            transform-origin: right top;
-        }
-    }
-    .burg-menu:focus {
-        span:nth-child(2) {
-            transform: scale(0);
-        }
-    }
-    .burg-menu:focus {
-        span:nth-child(3) {
-            transform: translate(9px, -20px) rotate(45deg);
-            transform-origin: left bottom;
-        }
-    }
+        z-index: 1;
+      }
+      #menu-checkbox {
+        display: none;
+      }
+      .menu-btn-burger {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background-color: black;
+        margin: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.25s ease-in-out;
+      } 
+      .menu-btn-burger:before, .menu-btn-burger:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        border-radius: 3px;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+      .menu-btn-burger:before {
+        top: -8px;
+      }
+      .menu-btn-burger:after {
+        top: 8px;
+      }
+      #menu-checkbox:checked ~ .menu-btn .menu-btn-burger {
+        transform: rotate(-45deg);
+      }
+      #menu-checkbox:checked ~ .menu-btn .menu-btn-burger:before {
+        transform: rotate(-90deg);
+        transform: scale(0);
+        top: 0;
+      }
+      #menu-checkbox:checked ~ .menu-btn .menu-btn-burger:after {
+        transform: rotate(90deg);
+        top: 0;
+      }
 }
 @media (max-width: 768px) {
     p {
         font-size: 14px;
     }
-    .tel {
-        a {
-            right: 50px;
-        }
-    }
     .container-second {
         div {
             width: 31%;
         }
+    }
+    .content-box {
+        justify-content: center;
     }
     .box-master {
         width: 87%;
@@ -1078,12 +1090,24 @@ footer {
     .footer {
         width: 94%;
     }
+    .input-box {
+        width: 350px;
+        height: 400px;
+    }
+    .name, .mail {
+        width: auto;
+    }
+    .name {
+        margin-bottom: 10px;
+    }
+    h3 {
+        margin-top: 10px;
+    }
 }
-@media (max-width: 500px) {
-    .burg-menu {
-        left: 88%;
-        top: 20px;
-        z-index: 3;
+@media (max-width: 485px) {
+    .burger {
+        top: 18px;
+        right: 5px;
     }
     .content-box {
         justify-content: center;
